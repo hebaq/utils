@@ -1,0 +1,32 @@
+{
+  "name": "@hebai/utils",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./types/index.d.ts",
+  "unpkg": "dist/js/index.es.js",
+  "scripts": {
+    "dev": "vite",
+    "clean": "rimraf dist lib es types",
+    "build": "npm run clean tsc && vite build",
+    "build:types": "tsc && vite build --mode fullTypes",
+    "preview": "vite preview"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-build": "^0.10.0",
+    "vite-plugin-dts": "^3.7.3",
+    "vue": "^3.4.21"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.5"
+  }
+}
