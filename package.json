@@ -1,8 +1,17 @@
 {
   "name": "@hebai/utils",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "types",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "types": "./types/index.d.ts",
@@ -12,7 +21,10 @@
     "clean": "rimraf dist lib es types",
     "build": "npm run clean tsc && vite build",
     "build:types": "tsc && vite build --mode fullTypes",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "publishConfig": {
     "access": "public",
@@ -20,13 +32,13 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-plugin-build": "^0.10.0",
     "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-vitepress-auto-sidebar": "^1.6.2",
+    "vitepress": "^1.0.0-rc.33",
     "vue": "^3.4.21"
-  },
-  "dependencies": {
-    "rimraf": "^5.0.5"
   }
 }

@@ -33,3 +33,5 @@ types
 docs/.temp
 docs/.docs
 package-lock.json
+
+docs/.vitepress/cache
